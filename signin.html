@@ -1,0 +1,169 @@
+<html>
+<head><title>Sign In Page</title></head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<style>
+    fieldset{
+      display: block;
+      background-color: aliceblue;
+      opacity: 0.6;
+      width: 300px;
+      text-align: center;
+      margin: auto;
+      border-radius: 20px;
+    }
+    legend {
+      background-color: black;
+      color: yellow;
+    }
+    h1 {
+      font-size: 70px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      opacity: 0.8;
+    }
+    body {
+      text-align: center;
+    }
+    input[type="submit"] {
+      color: rgb(255, 255, 255);
+      margin-top: 30px;
+      padding: 18px 18px 18px;
+      font-size: 20px;
+      margin-top: 30px;
+      border-radius: 12px;
+      opacity: 0.8;
+      background-color: rgb(0, 0, 0);
+    }
+    input[type="text"] {
+      width: 18%;
+      padding: 7px 13px;
+      margin: 12px 0;
+      box-sizing: border-box;
+      border-radius: 12px;
+      opacity: 1px;
+      color: rgb(255, 31, 1);
+      background-color:white;
+      width: 250px;
+    }
+    input[type="number"] {
+      width: 18%;
+      padding: 7px 13px;
+      margin: 12px 0;
+      box-sizing: border-box;
+      border-radius: 12px;
+      opacity: 1px;
+      color: rgb(255, 31, 1);
+      background-color:white;
+      width: 250px;
+    }
+    input[type="email"] {
+      width: 18%;
+      padding: 7px 13px;
+      margin: 12px 0;
+      box-sizing: border-box;
+      border-radius: 12px;
+      opacity: 1px;
+      color: rgb(255, 31, 1);
+      background-color:white;
+      width: 250px;
+    }
+    input[type="date"] {
+      width: 18%;
+      padding: 7px 13px;
+      margin: 12px 0;
+      box-sizing: border-box;
+      border-radius: 12px;
+      opacity: 1px;
+      color: rgb(255, 31, 1);
+      background-color:white;
+      width: 250px;
+    }
+    input[type="password"] {
+      width: 18%;
+      padding: 7px 13px;
+      margin: 12px 0;
+      box-sizing: border-box;
+      border-radius: 12px;
+      opacity: 1px;
+      background-color:white;
+      width: 250px;
+      color: rgb(255, 31, 1);
+    }
+    body {
+      background-image: url("img10.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+}
+h3{
+  font-size: 25;
+}
+
+button{
+font-size:20px;
+text-align:center;
+}
+
+a{text-decoration:none;}
+  </style>
+<body ng-app="myapp" ng-controller="ctrl">
+
+<form id="my" name="myform" ng-submit="save1(this)">
+<h1><u><b></u></b></h1>
+<h3>Name</h3>
+<input type="text" placeholder="Full Name" name="name" ng-model="name1" ng-required="true">
+<span ng-show="myform.name.$dirty&&myform.name.$invalid"></span>
+<span ng-show="myform.name.$error.required"></span><br><br>
+
+<h3>Mobile Number</h3>
+<input type="number" placeholder="Mobile Number" name="number" ng-model="number" ng-minlength="10" ng-maxlength="10" ng-required="true">
+<span ng-show="myform.number.$dirty&&myform.number.$invalid"></span>
+<span ng-show="myform.number.$error.required"></span><br><br>
+
+
+<h3>Email Address</h3>
+<input type="email" placeholder="Email Address"  name="email" ng-model="email5" ng-required="true">
+<span ng-show="myform.email.$dirty&&myform.email.$invalid"></span>
+<span ng-show="myform.email.$error.required"></span><br><br>
+
+<h3>Birth Date</h3>
+<input type="date" align="center" placeholder="Birth Date" name="date1" ng-model="date1" ng-required="true">
+<span ng-show="myform.date1.$dirty&&myform.date1.$invalid">Invalid Date</span>
+<span ng-show="myform.date1.$error.required"></span><br><br>
+
+
+
+<button><a href="landing.html">Back</button></a>&nbsp;&nbsp;
+<button><a href="samplemain.html">Submit</button></a>
+</form>
+
+
+
+<script>
+var app=angular.module("myapp",[]);
+app.controller('ctrl',function($scope){
+
+$scope.save1=function($this){
+if($this.myform.number.$error.minlength){
+alert("Invalid Mobile Number");
+} 
+else if($this.myform.email.$error.required){
+alert("Please Enter Email Address");
+}
+else if($this.myform.name.$error.required){
+alert("Please Enter Full Name");
+}
+else if($this.myform.date1.$error.required){
+alert("Birth Date Is Mandatory");
+}
+else if($this.myform.date1.$error.$invalid){
+alert("Invalid Date");
+}
+else {
+alert("Successfully Registered");
+}
+}
+});
+
+</script>
+</body>
+</html>

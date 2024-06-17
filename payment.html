@@ -1,0 +1,80 @@
+<html>
+<head><title>Payment</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<style>
+body{background-image:url("payment1.webp");
+background-size:100% 100%;}
+
+
+#number,#name,#date{
+ border-radius:12px;
+}
+
+#submit,#reset{
+
+      color:black;
+      margin-top: 20px;
+      padding: 10px 10px 10px;
+      font-size: 15px;
+      margin-top: 30px;
+      border-radius: 12px;
+      opacity: 0.8;
+      background-color:aliceblue;
+}
+
+#pay{
+text-align:center;
+font-size:20px;
+}
+
+fieldset{
+      display: block;
+      background-color: white;
+      opacity: 10;
+      width: 300px;
+      text-align: center;
+      margin: auto;
+      border-radius: 20px;
+    }
+
+</style>
+
+
+<body ng-app="myapp">
+<div id="pay">
+<fieldset>
+<h3>Payment</h3>
+<i class="fa fa-cc-visa" style="color:navy;font-size:30px"></i>
+<i class="fa fa-cc-mastercard" style="color:red;font-size:30px"></i>
+<i class="fa fa-cc-discover" style="color:orange;font-size:30px"></i>
+<form>
+<h3>Card Number</h3>
+<input type="number" id="number" placeholder="Card Number" name="number" ng-model="number" ng-required="true">
+
+
+<h3>Card Holder Name</h3>
+<input type="text" id="name" placeholder="Card Holder Name" name="name" ng-model="name" ng-required="true">
+
+<h3>Expiry Date</h3>
+<input type="date" id="date" placeholder="dd-mm-yyyy" name="Date" ng-model="Date1" ng-required="true">
+
+<h3>Card Type</h3>
+<input type="radio" ng-model="card" value="card">Debit Card&nbsp;&nbsp;
+<input type="radio" ng-model="card" value="card">Credit Card<br><br>
+
+
+<input type="submit" id="submit" ng-model="submit" value="Make Payment">&nbsp;&nbsp;
+<input type="Reset" id="reset" ng-model="Reset" value="Reset">
+
+</form>
+</fieldset>
+</div>
+</body>
+</html>

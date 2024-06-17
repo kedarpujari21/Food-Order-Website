@@ -1,0 +1,97 @@
+<html>
+<head><title>About Us</title>
+      <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+</head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+<style>
+
+body{background-image:url("think.webp");
+background-size:100% 100%;}
+
+h1{
+font-size:70;
+color:aliceblue;
+}
+
+#a{
+text-align:center;
+color:white;
+ }
+
+
+
+
+
+h2{
+text-align:center;
+color:white;
+}
+
+#e{
+background-color:aliceblue;
+color:black;
+border: none;
+border-radius:12px;
+
+
+
+      
+      margin-top: 20px;
+      padding: 10px 10px 10px;
+      font-size: 15px;
+      margin-top: 15px;
+      opacity: 0.8;
+}
+
+#d{
+      text-decoration: none;
+
+}
+</style>
+</head>
+<body ng-app="myapp">
+<center><h1><i>About Us..</i></h1></center>
+<p id='a'><i>Quality. Taste. Service. Customer experience.</i><br><br>
+<b>Thought...</b><br><br>
+
+The four tenets of Trident Group have stood the test of time and are still the driving force behind everything we do. Since 1970, an unrelenting focus on delivering a remarkable customer experience has been our motto. With a desire to take our creativity, innovation, quality, taste, service levels and reach to the next level, trident has spread its wings across Pune and surrounding geographies. Today, Trident is synonymous with tasty, healthy, hygienic and nutritious food delivered with a smile!<br><br>
+<b>Food...</b><br><br>
+
+Meticulously designed with the help of an expert nutritionist, a truly delicious menu awaits you at Trident. Craving for authentic Food? Experience a wide assortment of mouth-watering delicacies prepared from fresh and natural ingredients without chemicals, additives, colours or preservatives. Steaming hot Rassam Wada, Pesarattu, Molgapudi Idlies and Appam are the highlights of our specialty offerings. And if your taste buds are longing for some Maharashtrian spices, Trident serves up delectable Kothimbir Vadi, Thalipeeth, Misal and several other gems from the Marathi cuisine. Another specialty on offer is our exclusive Health Menu with protein-rich tofu/soya, high-fiber Veggie Thalipeeth and Daliya, fresh juices, protein shakes, Sprouted Moong Salad Chaat and more! With a relentless focus on quality, hygiene and nutrition, our prompt and efficient service adds a layer of unmatched customer satisfaction.<br><br>
+<b>Location...</b><br><br>
+
+We have been very particular about choosing the right locations for our outlets, ensuring easy accessibility, ample parking space and overall convenience for our customers. When it comes to the ambience, we try to deliver a warm, friendly and amicable atmosphere that is nothing short of welcoming. Easily accessible from all major areas in Pune, you can walk into any of our outlets in town – Fergusson College, Law College Road, Kalyani Nagar, Bajirao Road, Market Yard / Bibwewadi, Aundh or Baner.</p><br><br>
+<center><h2><i><b>Our Outlets...</i></b></h2></center>
+<center><button id="e"><a id="d" href="#!Fergusion College"><h2 id="e"><i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;Fergusion College</a></h2></button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button id="e"><a id="d" href="#!Law College Road"><h2 id="e"><i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;Law College Road</a></h2></button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button id="e"><h2 id="e"><i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;Kalyani Nagar</h2></button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button id="e"><h2 id="e"><i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;Bajirao Road</h2></button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button id="e"><h2 id="e"><i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;Market Yard&nbsp;&nbsp;</h2></center>
+
+<div ng-view></div>
+<script>
+var app = angular.module("myapp", ["ngRoute"]);
+app.config(function($routeProvider) {
+  $routeProvider
+.when("/Fergusion College", {
+templateUrl : "fergusion.html"
+})
+.when("/Law College Road", {
+templateUrl : "law.html"
+})
+.when("/Kalyani Nagar", {
+templateUrl : "kalyaninagar.html"
+})
+.when("/Bajirao Road", {
+templateUrl : "bajirao.html"
+})
+.when("/Market Yard", {
+templateUrl : "market.html"
+})
+});
+</script>
+</body>
+</html>

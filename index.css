@@ -1,0 +1,323 @@
+:root {
+  --mainColor:#f6f8fa;
+  --darkBlack:#2d2f31;
+  --darkGrey:#61666b;
+  --grey:#d5d5d5;
+  --lightGrey:#f2f2f2;
+  --yellow:#fecb40;
+  --red:#df113c;
+}
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family:sans-serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+
+}
+body{
+  width: 100;
+  height: auto;
+  color: #2d2f31;
+}
+p{
+  font-size: 14px;
+}
+
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 105px;
+  height: 100%;
+  background-color:transparent ;
+  z-index: 1;
+  padding-top: 70px;
+  margin-top: 10px;
+}
+
+.sidebar-menu{
+  width: 100%;
+  text-align: center;
+  padding: 10px 5px;
+  color:transparent;
+}
+.sidebar-menu > a {
+  text-decoration: none;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #2d2f31;
+}
+.sidebar-menu:hover{
+  border-right: 2px solid var(--yellow);
+  color: #fecb40;
+}
+.sidebar-menu:hover > a {
+  color: #fecb40;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+html{
+  height: 100%;
+}
+.container{
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+  height: 100%;
+  overflow: hidden;
+}
+/* menu design */
+#menu{
+  background-color:;
+}
+.brand-logo {
+  padding: 0 30px;
+}
+.brand-logo img {
+  width: 130px;
+  height: 70px;
+  margin-top: 10px;
+  position: relative;
+  left:20px;
+  right: 40px;
+  top: 2;
+}
+.menu-item a{
+display: block;
+text-decoration: none;
+font-size: 20px;
+padding: 8px 30 px;
+margin: 12px 0;
+color: rgb(14, 14, 13);
+font-weight: 300;
+font-style: italic;
+
+}
+#food-container{
+background-color: whitesmoke;
+overflow: scroll;
+overflow-x: hidden;
+box-sizing: content-box;
+}
+#header{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-top:40px;
+  padding-bottom: 10px;
+  position: sticky;
+  top:0;
+  background:whitesmoke;
+  z-index: 1;
+}
+::-webkit-scrollbar{
+  display:none;
+
+}
+#header. address{
+  font-size: 20px;
+
+}
+.your-address{
+  border:1px solid indianred;
+  color:indianred;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width:150px;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+} 
+.add-box i{
+  font-size: 20px;
+  
+}
+.food-items{
+ 
+}
+#biryani,#chicken,#paneer,#vegetable,#chinese,#south-indian{
+    margin-top: 40px;
+
+}
+
+#paneer #item-card,#vegetable #item-card{
+  background: rgb(218, 253, 18);
+}
+
+#chinese #item-card,#south-indian #item-card{
+  background: rgb(221, 243, 243);
+}
+
+#category-name,.item-menu{
+  margin: 10px;
+  font-size: 35px;
+  color: coral;
+  }
+
+  
+
+  /*#item-card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #item-card:hover img{
+    transform: scale(1.2);
+  }
+
+  #item-name{
+    margin: 5px 0;
+    font-weight: 600;
+    color:darkslategray;
+    font-size: 18px;
+  }
+
+  #item-price{
+    margin: 0;
+    color:rgb(2, 27, 27);
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  #card-top{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+
+  }
+
+  #rating{
+    padding: 7px;
+    color: goldenrod;
+    background: black;
+    font-size: 14px;
+    border-radius: 14px;
+  }
+
+  .fa-heart-o{
+    padding: 6px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .toggle-heart{
+    background: orangered;
+    color:white;
+  }*/
+
+/*Dashboard*/
+.dashboard{
+  height: 100%;
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 50px;
+  
+}
+
+
+.dashboard-content{
+  display: grid;
+  width: 280px;
+  grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0.5rem 1rem 1rem 1rem;
+
+}
+
+.dashboard-card{
+  background-color: var(--mainColor);
+  box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+  border-radius: 15px;
+position: relative;
+cursor: pointer;
+}
+.card-image{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.dashboard-card:hover{
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.card-detail{
+  padding: 10px;
+}
+.card-detail > h4 > span {
+  float: right;
+}
+.card-time{
+  color: var(--darkGrey);
+  font-size: 0.8rem;
+  padding-top: 10px;
+
+}
+
+.dashboard-banner{
+  width: 150%;
+  height: 20%;
+  position: relative;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.dashboard-banner > img {
+  width: 70%;
+  height: 90%;
+  object-fit: COVER;
+  border-radius: 30px;
+}
+.banner-promo{
+  position: absolute;
+  color: var(--lightGrey);
+  top: 25%;
+  left: 10%;
+  font-weight: 800;
+}
+#ban{
+  color: #ff0000;
+}
+.dashboard-title{
+  padding: 0 1rem;
+}
+
+
+
+
+
+.util i,.user i{
+  font-size:18px;
+  margin:0 16px;
+  border: 1px solid crimson;
+  padding: 8px 16px ;
+  color:crimson;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.util i:hover{
+  color:aqua;
+}
+
+
+
+
+#cart{
+  background-color: blueviolet;
+}
+
+

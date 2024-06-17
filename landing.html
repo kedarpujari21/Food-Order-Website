@@ -1,0 +1,118 @@
+<html>
+<head>
+<style>
+
+body{background-image: url("img1.jpg");
+background-size: 100% 100%;}
+
+body{width:100%;
+height:100%;
+background-position:center center;
+background-repeat:no-repeat;
+backface-visibility:hidden;
+animation: slideBg 12s linear infinite 0s;
+animation-timing-function: ease-in-out;
+background-image: url("img1.jpg");
+}
+
+@keyframes slideBg {
+0% {
+     background-image: url("img1.jpg");
+   }
+
+25% {
+     background-image: url("img2.jpg");
+    }
+
+50% {
+     background-image: url("img10.jpg");
+    }
+
+75% {
+     background-image: url("img4.jpg");
+    }
+
+100% {
+     background-image: url("img5.jpg");
+    }
+
+100% {
+     background-image: url("img6.jpg");
+    }
+
+
+}
+
+
+h1{color:aliceblue;}
+u{color:aliceblue;}
+h2{color:aliceblue;
+font-size:20;}
+a{color:black;
+text-decoration:none;}
+
+div{background-color:aliceblue;}
+
+button{
+
+
+
+
+      color:black;
+      margin-top: 30px;
+      padding: 18px 18px 18px;
+      font-size: 20px;
+      margin-top: 30px;
+      border-radius: 12px;
+      opacity: 0.8;
+      background-color:aliceblue;
+
+}
+
+h6{color:aliceblue;
+text-align:center;
+font-size:25;}
+
+#a{
+  font-size: 25;
+  text-align:center;
+  color:aliceblue;
+}
+
+h1{font-size:40;}
+
+
+
+</style>
+</head>
+
+
+<script type="text/javascript">
+document.write("<font size=+2 style='color: white;'>");
+var day=new Date();
+var hours=day.getHours();
+
+if (hours>=0&&hours<12) {
+document.write("Good Morning!!");
+} else if (hours==12) {
+document.write("Good Afternoon!!");
+} else if (hours>=12&&hours<=17) {
+document.write("Good Afternoon!!"); 
+}
+else {
+document.write("Good Evening!!");
+}
+</script>
+
+
+
+<body>
+<center><i><u><h1>Trident Restaurant</h1></u></i></center>
+<center><h2>We Are Ready To Serve..</h2></center>
+<center><button><a href="signin.html">Create Account</a></button></center>
+<center><h6>If You Are New Please Register Yourself</h6></center>
+
+<center><button id="a"><a href="Login.html">Login</a></button></center>
+<center><h6>Please Login</h6></center>
+</body>
+</html>
